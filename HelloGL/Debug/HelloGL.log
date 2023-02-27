@@ -1,3 +1,8 @@
 ﻿  HelloGL.cpp
-D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(55,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(55,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(56,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(58,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(59,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(61,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+D:\Github test\Foggs-Sem2\HelloGL\HelloGL.cpp(62,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
   HelloGL.vcxproj -> D:\Github test\Foggs-Sem2\Debug\HelloGL.exe

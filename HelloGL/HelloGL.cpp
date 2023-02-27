@@ -52,11 +52,16 @@ void HelloGL::DrawPolygon()
 
 	glBegin(GL_POLYGON); //starts to draw a polygon
 	glColor4f(0.8f, 0.0f, 0.0f, 0.0f);
-	glVertex2f(0.0, 0.7); //next point, top right
+	glVertex2f(-0.9, 0.0); //next point, top right
+	glVertex2f(-0.5, 0.8); 
 	glColor4f(0.0f, 0.0f, 1.0f, 0.0f);
-	glVertex2f(0.75, -0.5); //bottom right
+	glVertex2f(0.5, 0.8);
+	glVertex2f(0.9, 0.0);
 	glColor4f(0.0f, 0.5f, 0.5f, 0.0f);
-	glVertex2f(-0.75, -0.5); //last point of the polygon, bottom left
+	glVertex2f(0.5, -0.8);
+	glVertex2f(-0.5, -0.8);
+
+
 	glEnd(); // defines the end of the draw
 
 	glPopMatrix();
