@@ -35,6 +35,24 @@ Color HelloGL::colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0,      // v0-v1-v2 (fro
 				0, 0, 1,   0, 0, 0,   0, 1, 0,      // v4-v7-v6 (back)
 				0, 1, 0,   0, 1, 1,   0, 0, 1 };    // v6-v5-v4
 
+Vertex HelloGL::indexedVertices[] = { 1, 1, 1,  -1, 1, 1,  // v0,v1,
+				-1,-1, 1,   1,-1, 1,   // v2,v3
+				1,-1,-1,   1, 1,-1,    // v4,v5
+				-1, 1,-1,   -1,-1,-1 }; // v6,v7
+
+Color HelloGL::indexedColors[] = { 1, 1, 1,   1, 1, 0,   // v0,v1,
+				1, 0, 0,   1, 0, 1,   // v2,v3
+				0, 0, 1,   0, 1, 1,   // v4,v5
+				0, 1, 0,   0, 0, 0 }; //v6,v7
+
+GLushort HelloGL::indices[] = { 0, 1, 2,  2, 3, 0,      // front
+				0, 3, 4,  4, 5, 0,      // right
+				0, 5, 6,  6, 1, 0,      // top
+				1, 6, 7,  7, 2, 1,      // left
+				7, 4, 3,  3, 2, 7,      // bottom
+				4, 7, 6,  6, 5, 4 };    // back
+
+
 // chnage camera need to change eye and center crazyyyyy!!
 HelloGL::HelloGL(int argc, char* argv[])
 {
@@ -76,7 +94,10 @@ void HelloGL::Display()
 	glRotatef(rotation, 1.0f, 0.0f, -1.0f);
 
 
-	DrawCubeArray();
+	//DrawCubeArray();
+	//DrawIndexedCube(); 
+	DrawCubeArrayAlt();
+	//DrawIndexedCubeAlt();
 
 	glPopMatrix();
 	glFlush(); //flushes the scene drawn to the graphics card
@@ -114,6 +135,24 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 	{
 		camera->eye.x -= 0.8f;
 	}
+
+}
+
+void HelloGL::DrawIndexedCube()
+{
+	glPushMatrix();
+
+	glBegin(GL_TRIANGLES);
+	for (int i = 0; i < 36; i++)
+	{
+		glColor3f(indexedColors[indices[i]].r, indexedColors[indices[i]].g, indexedColors[indices[i]].b);
+		glVertex3f(indexedVertices[indices[i]].x, indexedVertices[indices[i]].y, indexedVertices[indices[i]].z);
+		
+	}
+	glEnd();
+
+	glPopMatrix();
+
 
 }
 
@@ -256,6 +295,38 @@ void HelloGL::DrawCubeArray()
 	glPopMatrix();
 
 }
+
+void HelloGL::DrawCubeArrayAlt()
+{
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
+	glVertexPointer(3, GL_FLOAT, 0, vertices);
+	glColorPointer(3, GL_FLOAT, 0, colors);
+
+	glPushMatrix();
+	glDrawArrays(GL_TRIANGLES, 0, 36);
+	glPopMatrix();
+
+	glDisableClientState(GL_COLOR_ARRAY);
+	glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+void HelloGL::DrawIndexedCubeAlt()
+{
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
+	glVertexPointer(3, GL_FLOAT, 0, indexedVertices);
+	glColorPointer(3, GL_FLOAT, 0, indexedColors);
+
+	glPushMatrix();
+	glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, indices);
+	glPopMatrix();
+
+	glDisableClientState(GL_COLOR_ARRAY);
+	glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+
 
 void HelloGL::DrawObjects()
 {

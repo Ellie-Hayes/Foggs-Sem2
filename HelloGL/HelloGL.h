@@ -40,9 +40,12 @@ class HelloGL
 		void DrawPolygon();
 		void DrawCube();
 		void DrawCubeArray();
+		void DrawCubeArrayAlt();
+		void DrawIndexedCubeAlt();
 		void DrawObjects();
 		void Update(); 
 		void Keyboard(unsigned char key, int x, int y);
+		void DrawIndexedCube();
 
 	private:
 		float rotation; 
@@ -50,5 +53,9 @@ class HelloGL
 
 		static Vertex vertices[];
 		static Color colors[];
+
+		static Vertex indexedVertices[];
+		static Color indexedColors[];
+		static GLushort indices[];
 
 };
