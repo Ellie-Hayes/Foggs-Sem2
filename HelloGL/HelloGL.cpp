@@ -53,6 +53,7 @@ GLushort HelloGL::indices[] = { 0, 1, 2,  2, 3, 0,      // front
 				4, 7, 6,  6, 5, 4 };    // back
 
 
+
 // chnage camera need to change eye and center crazyyyyy!!
 HelloGL::HelloGL(int argc, char* argv[])
 {
@@ -96,8 +97,8 @@ void HelloGL::Display()
 
 	//DrawCubeArray();
 	//DrawIndexedCube(); 
-	DrawCubeArrayAlt();
-	//DrawIndexedCubeAlt();
+	//DrawCubeArrayAlt();
+	DrawIndexedCubeAlt();
 
 	glPopMatrix();
 	glFlush(); //flushes the scene drawn to the graphics card
@@ -324,6 +325,7 @@ void HelloGL::DrawIndexedCubeAlt()
 
 	glDisableClientState(GL_COLOR_ARRAY);
 	glDisableClientState(GL_VERTEX_ARRAY);
+
 }
 
 
