@@ -13,10 +13,13 @@ public:
 
 	void Draw();
 	void Update();
+	void SetRotation(float rotation);
 
 private:
 	static Vertex indexedVertices[];
 	static Color indexedColors[];
 	static GLushort indices[];
+
+	float _rotation;
 };
 

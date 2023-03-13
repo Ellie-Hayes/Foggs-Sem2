@@ -18,7 +18,7 @@ GLushort Cube::indices[] = { 0, 1, 2,  2, 3, 0,      // front
 
 Cube::Cube()
 {
-
+	_rotation = 0.0f; 
 }
 
 Cube::~Cube()
@@ -33,6 +33,7 @@ void Cube::Draw()
 	glColorPointer(3, GL_FLOAT, 0, indexedColors);
 
 	glPushMatrix();
+	glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
 	glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, indices);
 	glPopMatrix();
 
@@ -42,4 +43,11 @@ void Cube::Draw()
 
 void Cube::Update()
 {
+	_rotation += 0.8f; 
+	if (_rotation >= 360.0f) { _rotation = 0.0f; }
+}
+
+void Cube::SetRotation(float rotation)
+{
+	_rotation = rotation; 
 }

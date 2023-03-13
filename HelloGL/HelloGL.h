@@ -5,6 +5,7 @@
 #include "GL\freeglut.h" //freeglut library
 #include "GLUTCallbacks.h"
 #include "Structures.h"
+#include "Cube.h"
 #define REFRESHRATE 16
 
 
@@ -15,25 +16,12 @@ class HelloGL
 		~HelloGL(void);
 
 		void Display();
-		void DrawPolygon();
-		void DrawCube();
-		void DrawCubeArray();
-		void DrawCubeArrayAlt();
-		void DrawIndexedCubeAlt();
-		void DrawObjects();
 		void Update(); 
 		void Keyboard(unsigned char key, int x, int y);
-		void DrawIndexedCube();
 
 	private:
 		float rotation; 
 		Camera* camera;
-
-		static Vertex vertices[];
-		static Color colors[];
-
-		static Vertex indexedVertices[];
-		static Color indexedColors[];
-		static GLushort indices[];
+		Cube* cube; 
 
 };
