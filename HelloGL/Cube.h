@@ -8,7 +8,7 @@
 class Cube
 {
 public:
-	Cube();
+	Cube(float x, float y, float z);
 	~Cube();
 
 	void Draw();
@@ -20,6 +20,7 @@ private:
 	static Color indexedColors[];
 	static GLushort indices[];
 
+	Vector3 _position; 
 	float _rotation;
 };
 

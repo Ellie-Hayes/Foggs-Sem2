@@ -22,6 +22,6 @@ class HelloGL
 	private:
 		float rotation; 
 		Camera* camera;
-		Cube* cube; 
+		Cube* cube[200];
 
 };
