@@ -1,13 +1,21 @@
 #include "HelloGL.h"
 
-
-// chnage camera need to change eye and center crazyyyyy!!
 HelloGL::HelloGL(int argc, char* argv[])
 {
+	initGL(argc, argv);
+	initObjects();
+
+	glutMainLoop(); 
+}
+
+void HelloGL::initObjects()
+{
 	camera = new Camera();
+	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
+
 	for (int i = 0; i < 200; i++)
 	{
-		cube[i] = new Cube(((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+		cube[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
 	}
 
@@ -15,7 +23,11 @@ HelloGL::HelloGL(int argc, char* argv[])
 	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;
 	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 
-	rotation = 0.0f; 
+	rotation = 0.0f;
+}
+
+void HelloGL::initGL(int argc, char* argv[])
+{
 	GLUTCallbacks::Init(this);
 
 	glutInit(&argc, argv);
@@ -38,7 +50,6 @@ HelloGL::HelloGL(int argc, char* argv[])
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
 
-	glutMainLoop(); 
 }
 
 void HelloGL::Display()
@@ -77,8 +88,11 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 }
 
 
+
+
 HelloGL::~HelloGL(void)
 {
 	delete camera;
 }
+
 

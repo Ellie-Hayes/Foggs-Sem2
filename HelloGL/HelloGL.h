@@ -6,6 +6,7 @@
 #include "GLUTCallbacks.h"
 #include "Structures.h"
 #include "Cube.h"
+#include "MeshLoader.h"
 #define REFRESHRATE 16
 
 
@@ -15,9 +16,14 @@ class HelloGL
 		HelloGL(int argc, char* argv[]);
 		~HelloGL(void);
 
+		void initObjects();
+		void initGL(int argc, char* argv[]);
+
 		void Display();
 		void Update(); 
 		void Keyboard(unsigned char key, int x, int y);
+
+		
 
 	private:
 		float rotation; 
