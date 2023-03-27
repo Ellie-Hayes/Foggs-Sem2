@@ -12,10 +12,19 @@ void HelloGL::initObjects()
 {
 	camera = new Camera();
 	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
+	Mesh* pyramidMesh = MeshLoader::Load((char*)"pyramid.txt");
+
+	Texture2D* texture = new Texture2D();
+	texture->Load((char*)"Penguins.raw", 512, 512);
 
 	for (int i = 0; i < 200; i++)
 	{
-		cube[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+		objects[i] = new Cube(cubeMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+
+	}
+	for (int i = 200; i < 400; i++)
+	{
+		objects[i] = new Pyramid(pyramidMesh, nullptr, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 
 	}
 
@@ -46,18 +55,25 @@ void HelloGL::initGL(int argc, char* argv[])
 	glViewport(0, 0, 800, 800);
 	gluPerspective(45, 1, 1, 1000); // Field of view, Aspect Ratio, Near clipping distance, Far clipping distance. 
 	glTranslatef(0.0f, 0.0f, -5.0f);
-	glMatrixMode(GL_MODELVIEW);
-	glEnable(GL_CULL_FACE);
+	
+
+	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
+	
+	glCullFace(GL_BACK);
+
+	glMatrixMode(GL_MODELVIEW);
+	
 
 }
 
 void HelloGL::Display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //this clears the scene
-	for (int i = 0; i < 200; i++)
+	for (int i = 0; i < 400; i++)
 	{
-		cube[i]->Draw();
+		objects[i]->Draw();
 	}
 	
 	glFlush(); //flushes the scene drawn to the graphics card
@@ -69,9 +85,9 @@ void HelloGL::Update()
 {
 	glLoadIdentity();
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
-	for (int i = 0; i < 200; i++)
+	for (int i = 0; i < 400; i++)
 	{
-		cube[i]->Update();
+		objects[i]->Update();
 	}
 	
 	glutPostRedisplay();

@@ -1,6 +1,13 @@
 #pragma once
+#ifndef _MeshLoader
+#define _MeshLoader
 
+#include <iostream>
+#include <fstream>
+
+#ifndef _hStructs
 #include "Structures.h"
+#endif
 
 namespace MeshLoader
 {
@@ -8,3 +15,4 @@ namespace MeshLoader
 	Mesh* Load(char* path);
 };
 
+#endif

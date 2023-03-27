@@ -1,11 +1,7 @@
 #pragma once
-#include <Windows.h> //Required for OpenGL on Windows 
-#include <gl/GL.h> //OpenGL 
-#include <gl/GLU.h> //OpenGL Utilities 
-#include "GL\freeglut.h" //freeglut library
 #include "GLUTCallbacks.h"
-#include "Structures.h"
 #include "Cube.h"
+#include "Pyramid.h"
 #include "MeshLoader.h"
 #define REFRESHRATE 16
 
@@ -28,6 +24,6 @@ class HelloGL
 	private:
 		float rotation; 
 		Camera* camera;
-		Cube* cube[200];
+		SceneObject* objects[1000];
 
 };

@@ -1,6 +1,9 @@
 #pragma once
 class HelloGL;
 
+#include "GL\freeglut.h"
+#include <iostream>
+
 namespace GLUTCallbacks
 {
 	void Init(HelloGL* gl);
