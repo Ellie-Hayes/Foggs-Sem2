@@ -1,2 +1,11 @@
-﻿  Pyramid.cpp
-  HelloGL.vcxproj -> D:\Github test\Foggs-Sem2\Debug\HelloGL.exe
+﻿  Cube.cpp
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(8,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  GLUTCallbacks.cpp
+  HelloGL.cpp
+  Main.cpp
+  MeshLoader.cpp
+  Pyramid.cpp
+  SceneObject.cpp
+  Texture2D.cpp
+  Generating Code...
+  HelloGL.vcxproj -> C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\Debug\HelloGL.exe

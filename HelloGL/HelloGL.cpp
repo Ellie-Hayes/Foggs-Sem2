@@ -54,16 +54,14 @@ void HelloGL::initGL(int argc, char* argv[])
 	glLoadIdentity();
 	glViewport(0, 0, 800, 800);
 	gluPerspective(45, 1, 1, 1000); // Field of view, Aspect Ratio, Near clipping distance, Far clipping distance. 
-	glTranslatef(0.0f, 0.0f, -5.0f);
 	
-
-	glEnable(GL_TEXTURE_2D);
+	glEnable(GL_TEXTURE_2D); // without this you will just get white boxes
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
-	
 	glCullFace(GL_BACK);
 
 	glMatrixMode(GL_MODELVIEW);
+
 	
 
 }

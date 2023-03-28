@@ -4,6 +4,7 @@
 Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z) : SceneObject(mesh)
 {
 	_texture = texture;
+	
 	_rotation = rand() % 360;
 
 	_position.x = x;
