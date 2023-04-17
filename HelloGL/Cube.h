@@ -21,6 +21,7 @@ public:
 private:
 	Vector3 _position; 
 	float _rotation;
+	Material* _material; 
 	
 };
 

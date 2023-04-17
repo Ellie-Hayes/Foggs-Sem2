@@ -26,11 +26,6 @@ struct Camera
 	Vector3 up;
 };
 
-//struct Color
-//{
-//	GLfloat r, g, b;
-//};
-
 struct Vertex
 {
 	GLfloat x, y, z;
@@ -54,7 +49,7 @@ struct Mesh
 
 struct Lighting
 {
-	Vector4 Ambient, Diffuse, Specular;
+	Vector4 Ambient, Diffuse, Specular; // Lighting vector4 = rgb a 
 };
 
 struct Material

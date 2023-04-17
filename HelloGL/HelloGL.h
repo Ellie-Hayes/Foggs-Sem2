@@ -14,6 +14,7 @@ class HelloGL
 
 		void initObjects();
 		void initGL(int argc, char* argv[]);
+		void initLighting();
 
 		void Display();
 		void Update(); 
@@ -25,5 +26,8 @@ class HelloGL
 		float rotation; 
 		Camera* camera;
 		SceneObject* objects[1000];
+
+		Vector4* _lightPosition;
+		Lighting* _lightData;
 
 };
