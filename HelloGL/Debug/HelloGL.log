@@ -6,21 +6,4 @@ C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(14,86): warning C
 C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(16,28): warning C4305: '=': truncation from 'double' to 'float'
 C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(16,57): warning C4305: '=': truncation from 'double' to 'float'
 C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(16,86): warning C4305: '=': truncation from 'double' to 'float'
-  GLUTCallbacks.cpp
-  HelloGL.cpp
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(79,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(80,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(81,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(83,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(84,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(85,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(87,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(88,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(89,30): warning C4305: '=': truncation from 'double' to 'float'
-  Main.cpp
-  MeshLoader.cpp
-  Pyramid.cpp
-  SceneObject.cpp
-  Texture2D.cpp
-  Generating Code...
   HelloGL.vcxproj -> C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\Debug\HelloGL.exe

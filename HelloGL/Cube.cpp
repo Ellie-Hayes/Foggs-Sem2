@@ -63,25 +63,30 @@ void Cube::Draw()
 		glScalef(1, 1, 1);
 		glTranslatef(_position.x, _position.y, _position.z);
 		glRotatef(_rotation, 0.0f, 1.0f, 0.0f);
+		
+		glEnableClientState(GL_VERTEX_ARRAY);
+		glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
 
 		glEnable(GL_NORMAL_ARRAY);
 		glNormalPointer(GL_FLOAT, 0, _mesh->Normals);
 
-		glEnableClientState(GL_VERTEX_ARRAY);
-		glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
-
 		glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->Ambient.x));
+		glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->Diffuse.x));
+		glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->Specular.x));
 		glMaterialf(GL_FRONT, GL_SHININESS, _material->Shininess);
 
 		glTexCoordPointer(2, GL_FLOAT, 0, _mesh->TexCoords);
 		glPushMatrix();
 		glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);
 		glPopMatrix();
-
-		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-		glDisableClientState(GL_COLOR_ARRAY);
 		glDisableClientState(GL_VERTEX_ARRAY);
+		glDisableClientState(GL_NORMAL_ARRAY);
+		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+		
+		
 		glTranslatef(0, 0, 0);
+		
+		
 		
 	}
 	
