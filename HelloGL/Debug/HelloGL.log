@@ -1,9 +1,12 @@
 ﻿  Cube.cpp
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(7,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(14,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(14,57): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(14,86): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(16,28): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(16,57): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\Cube.cpp(16,86): warning C4305: '=': truncation from 'double' to 'float'
-  HelloGL.vcxproj -> C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\Debug\HelloGL.exe
+D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(7,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(14,28): warning C4305: '=': truncation from 'double' to 'float'
+D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(14,56): warning C4305: '=': truncation from 'double' to 'float'
+D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(14,84): warning C4305: '=': truncation from 'double' to 'float'
+  MeshObject.cpp
+D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(6,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(13,28): warning C4305: '=': truncation from 'double' to 'float'
+D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(13,56): warning C4305: '=': truncation from 'double' to 'float'
+D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(13,84): warning C4305: '=': truncation from 'double' to 'float'
+  Generating Code...
+  HelloGL.vcxproj -> D:\Github test\Foggs-Sem2\Debug\HelloGL.exe

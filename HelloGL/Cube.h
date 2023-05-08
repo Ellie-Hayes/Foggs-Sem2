@@ -11,15 +11,16 @@
 class Cube : public SceneObject
 {
 public:
-	Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z);
+	Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z, std::string name);
 	~Cube();
 
 	void Draw();
 	void Update();
 	void SetRotation(float rotation);
+	
 
 private:
-	Vector3 _position; 
+	
 	float _rotation;
 	Material* _material; 
 	

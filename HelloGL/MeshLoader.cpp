@@ -102,5 +102,6 @@ namespace MeshLoader
 		inFile.close();
 
 		return mesh;
+		
 	}
 }

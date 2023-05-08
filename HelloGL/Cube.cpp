@@ -1,7 +1,7 @@
 #include "Cube.h"
 
 
-Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z) : SceneObject(mesh)
+Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z, std::string name) : SceneObject(mesh)
 {
 	_texture = texture;
 	_rotation = rand() % 360;
@@ -11,52 +11,32 @@ Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z) : SceneObj
 	_position.z = z; 
 
 	_material = new Material();
-	_material->Ambient.x = 0.8; _material->Ambient.y = 0.05; _material->Ambient.z = 0.05;
+	_material->Ambient.x = 0.3; _material->Ambient.y = 0.4; _material->Ambient.z = 0.3;
 	_material->Ambient.w = 1.0;
-	_material->Diffuse.x = 0.8; _material->Diffuse.y = 0.05; _material->Diffuse.z = 0.05;
+	_material->Diffuse.x = 1.0; _material->Diffuse.y = 1.0; _material->Diffuse.z = 1.0;
 	_material->Diffuse.w = 1.0;
 	_material->Specular.x = 1.0; _material->Specular.y = 1.0; _material->Specular.z = 1.0;
 	_material->Specular.w = 1.0;
 	_material->Shininess = 100.0f;
 
+	_nameText = name.c_str();
 
 }
 
 Cube::~Cube()
 {
+
 }
 
 void Cube::Draw()
 {
+	Vector3 v = { _position.x, _position.y + 10, _position.z };
+	Color c = { 0.0f, 1.0f, 0.0f };
+
+	DrawString("Cube", &v, &c);
+
 	if (_mesh->Vertices != nullptr && _mesh->Normals != nullptr && _mesh->Indices != nullptr)
 	{
-		/*glBindTexture(GL_TEXTURE_2D, _texture->GetID());
-		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-
-		glEnable(GL_NORMAL_ARRAY);
-		glEnableClientState(GL_VERTEX_ARRAY);
-		
-		glNormalPointer(GL_FLOAT, 0, _mesh->Normals);
-		glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
-		glTexCoordPointer(2, GL_FLOAT, 0, _mesh->TexCoords);
-		
-
-		glPushMatrix();
-		glTranslatef(_position.x, _position.y, _position.z);
-		glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
-		glRotatef(_rotation, 0.0f, 1.0f, 0.0f);
-		glRotatef(_rotation, 0.0f, 0.0f, 1.0f);
-		
-		glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);
-		glPopMatrix();
-
-		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-		glDisableClientState(GL_COLOR_ARRAY);
-		glDisableClientState(GL_VERTEX_ARRAY);
-*/
-
-
-		
 		glBindTexture(GL_TEXTURE_2D, _texture->GetID());
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
@@ -85,10 +65,10 @@ void Cube::Draw()
 		
 		
 		glTranslatef(0, 0, 0);
-		
-		
-		
+
 	}
+
+	
 	
 }
 

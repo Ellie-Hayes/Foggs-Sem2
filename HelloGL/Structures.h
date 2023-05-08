@@ -7,6 +7,9 @@
 #include <gl/GL.h> //OpenGL 
 #include <gl/GLU.h> //OpenGL Utilities 
 #include "GL\freeglut.h" //freeglut library
+#include <vector>
+#include <string>
+
 struct Vector3
 {
 	float x;
@@ -26,6 +29,11 @@ struct Camera
 	Vector3 up;
 };
 
+struct Color
+{
+	float r, g, b; 
+};
+
 struct Vertex
 {
 	GLfloat x, y, z;
@@ -34,6 +42,13 @@ struct Vertex
 struct TexCoord
 {
 	GLfloat u, v;
+};
+
+struct Face
+{
+	int v1, v2, v3; // VERTEX DATA
+	int n1, n2, n3; // NORMAL DATA
+	int t1, t2, t3; //TEXCOORD DATA
 };
 
 struct Mesh
