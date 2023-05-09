@@ -11,7 +11,7 @@ Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z, std::strin
 	_position.z = z; 
 
 	_material = new Material();
-	_material->Ambient.x = 0.3; _material->Ambient.y = 0.4; _material->Ambient.z = 0.3;
+	_material->Ambient.x = 0.3; _material->Ambient.y = 0.3; _material->Ambient.z = 0.3;
 	_material->Ambient.w = 1.0;
 	_material->Diffuse.x = 1.0; _material->Diffuse.y = 1.0; _material->Diffuse.z = 1.0;
 	_material->Diffuse.w = 1.0;

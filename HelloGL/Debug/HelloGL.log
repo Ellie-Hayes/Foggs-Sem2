@@ -1,12 +1,11 @@
-﻿  Cube.cpp
-D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(7,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(14,28): warning C4305: '=': truncation from 'double' to 'float'
-D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(14,56): warning C4305: '=': truncation from 'double' to 'float'
-D:\Github test\Foggs-Sem2\HelloGL\Cube.cpp(14,84): warning C4305: '=': truncation from 'double' to 'float'
-  MeshObject.cpp
-D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(6,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(13,28): warning C4305: '=': truncation from 'double' to 'float'
-D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(13,56): warning C4305: '=': truncation from 'double' to 'float'
-D:\Github test\Foggs-Sem2\HelloGL\MeshObject.cpp(13,84): warning C4305: '=': truncation from 'double' to 'float'
-  Generating Code...
-  HelloGL.vcxproj -> D:\Github test\Foggs-Sem2\Debug\HelloGL.exe
+﻿  HelloGL.cpp
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(93,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(94,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(95,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(97,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(98,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(99,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(101,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(102,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\HelloGL\HelloGL.cpp(103,30): warning C4305: '=': truncation from 'double' to 'float'
+  HelloGL.vcxproj -> C:\Users\h014896m\Documents\GitHub\Foggs-Sem2\Debug\HelloGL.exe

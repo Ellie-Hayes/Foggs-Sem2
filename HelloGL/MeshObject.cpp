@@ -63,7 +63,6 @@ void MeshObject::Draw()
 		glDisableClientState(GL_NORMAL_ARRAY);
 		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
-
 		glTranslatef(0, 0, 0);
 
 	}

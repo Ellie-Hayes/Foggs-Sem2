@@ -25,7 +25,7 @@ void HelloGL::initObjects()
 	starTex->Load((char*)"stars.raw", 512, 512);
 
 	Texture2D* bearTex = new Texture2D();
-	bearTex->Load((char*)"bearTexAgain.bmp", 600, 600);
+	bearTex->Load((char*)"beige.bmp", 300, 300);
 
 	for (int i = 0; i < 200; i++)
 	{
@@ -36,7 +36,7 @@ void HelloGL::initObjects()
 		objects[i] = new Cube(cubeMesh, starTex, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f, "Cuba");
 	}
 	
-	objects[399] = new MeshObject(roomMesh, starTex, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f, "Room");
+	objects[399] = new MeshObject(roomMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f, "Room");
 
 	camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -35.0f;
 	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;
@@ -187,6 +187,7 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 void HelloGL::DrawString(const char* text, Vector3* position, Color* color)
 {
 	glPushMatrix();
+	glColor3f(color->r, color->g, color->b);
 	glTranslatef(position->x, position->y, position->z);
 	glRasterPos2f(0.0f, 0.0f);
 	glutBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, (unsigned char*)text);
